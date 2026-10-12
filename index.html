@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A simple vanilla JavaScript todo list application with local storage."
+    />
+    <title>Todo List</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9C%85</text></svg>"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Todo List</h1>
+        <p class="app__subtitle">Your tasks are saved in this browser.</p>
+      </header>
+
+      <form class="new-todo" id="new-todo-form" autocomplete="off">
+        <input
+          id="new-todo"
+          class="new-todo__input"
+          type="text"
+          placeholder="What needs to be done?"
+          aria-label="New todo"
+          maxlength="280"
+        />
+        <button class="new-todo__button" type="submit">Add</button>
+      </form>
+
+      <ul class="todo-list" id="todo-list" aria-label="Todo items"></ul>
+
+      <p class="empty" id="empty">Nothing here yet &mdash; add your first task above.</p>
+
+      <footer class="app__footer">
+        <span class="count" id="count">0 left</span>
+        <div class="filters" role="group" aria-label="Filter todos">
+          <button type="button" class="filter active" data-filter="all">All</button>
+          <button type="button" class="filter" data-filter="active">Active</button>
+          <button type="button" class="filter" data-filter="completed">Completed</button>
+        </div>
+        <button type="button" class="clear" id="clear-completed">Clear completed</button>
+      </footer>
+    </main>
+
+    <script type="module" src="src/ui.js"></script>
+  </body>
+</html>

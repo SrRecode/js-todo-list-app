@@ -1,0 +1,17 @@
+{
+  "name": "js-todo-list-app",
+  "version": "1.0.0",
+  "description": "A simple vanilla JavaScript todo list application with local storage",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "todo",
+    "vanilla-javascript",
+    "localstorage"
+  ],
+  "license": "MIT"
+}
